@@ -1,0 +1,252 @@
+/* ## MUSIC STORE STYLING ## */
+/* @Author Karthik CM */
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+/* Form elements */
+
+input[type=text], input[type=password], select {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: #cc0033;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 5px 0 0;
+}
+
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+
+/* -------------------------------------------------------------------------------- */
+
+
+html,body,h1,h2,h3,h4,span,a {font-family:"Lato", sans-serif}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+.overlay-sheet{background:#959492;opacity: 0.5; position:absolute;top:0;filter:alpha(opacity=50);z-index:1;left:0}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('ui-resources/fonts/glyphicons-halflings-regular.eot');
+  src: url('ui-resources/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+  	   url('ui-resources/fonts/glyphicons-halflings-regular.woff') format('woff'), 
+  	   url('ui-resources/fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
+  	   url('ui-resources/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.ms-content-div {
+	border-left: 4px solid black; border-right: 4px solid black;
+	margin-left: 100px; margin-right: 100px;
+	background-image: url('/musicstore/ui-resources/images/ms_dashboard_background.jpeg')
+}
+
+.ms-functions{text-align: center; padding: 140px 275px 165px 320px;}
+
+/* .ms-menu-items {background-color: black; color: white; padding-top: 15px; margin-top: 20px;} */
+.ms-menu-items {background-color: black; color: white; margin-top: 20px;}
+.ms-menu-list {color: white; font-size: 18px; font-family:"Lato", sans-serif}
+
+.ms-menu-items > .nav>li>a:focus, .ms-menu-items > .nav>li>a:hover {background-color: black; color: white; text-decoration: underline;}
+.nav-tabs>li>a {line-height: 1.42857143; border:none;}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {border-color: #337ab7; background-color: black;}
+
+.nav-tabs.nav-justified>li>a {border-bottom: 1px solid black; border-radius: 4px 4px 0 0;}
+
+
+.hide {display: none}
+.block {display: block;}
+.align-center {text-align: center;}
+.error-msg {color:red; font-weight: bold;}
+.success-msg {color:green; font-weight: bold;}
+
+.white-bg {background: white;}
+
+.underline {text-decoration: underline;}
+.bold {font-weight: bold;}
+.red-asterisk {color: red;}
+
+a,.cursor-pointer {cursor:pointer;}
+.cursor-na {cursor: not-allowed;}
+.cursor-auto {cursor: auto;}
+
+
+.margin-5 {margin: 5px;}
+.margin-10 {margin: 10px;}
+.margin-15 {margin: 15px;}
+.margin-20 {margin: 20px;}
+.margin-25 {margin: 25px;}
+
+.margin-top-10 {margin-top: 10px;}
+.margin-top-15 {margin-top: 15px;}
+.margin-top-20 {margin-top: 20px;}
+.margin-top-25 {margin-top: 25px;}
+
+.margin-right-10 {margin-right: 10px;}
+.margin-right-15 {margin-right: 15px;}
+.margin-right-20 {margin-right: 20px;}
+.margin-right-25 {margin-right: 25px;}
+
+.margin-bottom-5 {margin-bottom: 5px;}
+.margin-bottom-10 {margin-bottom: 10px;}
+.margin-bottom-15 {margin-bottom: 15px;}
+.margin-bottom-20 {margin-bottom: 20px;}
+.margin-bottom-25 {margin-bottom: 25px;}
+
+.margin-left-10 {margin-left: 10px;}
+.margin-left-15 {margin-left: 15px;}
+.margin-left-20 {margin-left: 20px;}
+.margin-left-25 {margin-left: 25px;}
+.margin-left-222 {margin-left: 222px;}
+
+.width-35 {width: 35%;}
+
+
+
+
+/* ms - forms */
+
+form.ms-form > div > input[type=text], select, input[type=number]{
+  width: 100%;
+  padding: 8px 16px;
+  /* margin: 8px 0; */
+  /* margin-bottom: 15px; */
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+div.ms-form-div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+/* ms - tables */
+table.ms-table > thead {background-color: #92caf9;}
+
+
+/* ms - info popup */
+div.ms-info-popup > div.ms-info-popup-content {
+	height: auto; width:35%;
+}
+
+div.ms-info-popup > button.close{
+	/* right: 10px; top: 4px; font-size: 30px; */
+}
+
+div.ms-info-popup > div.ms-info-popup-header {
+	padding: 2px;
+    background-color: dodgerblue;
+    color: white;
+    padding-top: 5px;
+}
+
+.popup-border-bottom {border-bottom: 1px solid #e5e5e5;}
+
+div.modal-backdrop.in {display: none;}

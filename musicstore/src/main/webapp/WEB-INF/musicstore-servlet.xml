@@ -1,0 +1,134 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:component-scan base-package="com.musicstore.controller"></context:component-scan>
+
+	<context:annotation-config />
+	
+	<mvc:annotation-driven />
+   
+   	<mvc:resources location="${spring.mvc.resources.location}" mapping="${spring.mvc.resources.mapping}" cache-period="31556926" />
+	
+	
+	<!-- Load property file -->
+	<context:property-placeholder location="classpath:musicstore.properties"/>
+	
+	
+	<!-- Property -->
+	<bean id="propertyUtil" class="com.musicstore.utils.PropertyUtil" init-method="loadProperties"></bean>
+
+	
+	<!-- Internal Resource View Resolver -->
+   	<!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+   		<property name="prefix" value="${spring.view.prefix}"></property>
+   		<property name="suffix" value="${spring.view.suffix}"></property>
+   	</bean> -->
+   	
+   	
+   	<!-- Tiles View Resolver & Tiles Configurer -->
+   	<bean id="viewResolver" class="org.springframework.web.servlet.view.tiles3.TilesViewResolver"></bean>
+   	
+   	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+   		<property name="definitions">
+   			<list>
+   				<value>/WEB-INF/ms-tiles-view.xml</value>
+   			</list>
+   		</property>
+   	</bean>
+   	
+   
+	<!-- Spring JDBC - DMDS -->
+	<bean id="musicStoreDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${oracle.db.driver}"></property>
+		<property name="url" value="${oracle.db.url}"></property>
+		<property name="username" value="${oracle.db.username}"></property>
+		<property name="password" value="${oracle.db.password}"></property>
+	</bean>
+
+   	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+   		<property name="dataSource" ref="musicStoreDataSource"></property>
+	</bean>
+
+	
+	<!-- Multipart Resolver (File Handling) -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
+   
+   
+	<!-- Controller -->
+	<bean id="redirectController" class="com.musicstore.controller.RedirectController"></bean>
+
+	<bean id="signUpController" class="com.musicstore.controller.SignUpController">
+   		<property name="signUpDao" ref="signUpDao"></property>
+	</bean>
+   
+	<bean id="loginLogoutController" class="com.musicstore.controller.LoginLogoutController">
+   		<property name="loginLogoutDao" ref="loginLogoutDao"></property>
+	</bean>
+	
+	<bean id="profileController" class="com.musicstore.controller.ProfileController">
+   		<property name="profileDao" ref="profileDao"></property>
+	</bean>
+	
+	<bean id="changePasswordController" class="com.musicstore.controller.ChangePasswordController">
+   		<property name="changePasswordDao" ref="changePasswordDao"></property>
+	</bean>
+   
+	<bean id="albumController" class="com.musicstore.controller.AlbumController">
+   		<property name="albumDao" ref="albumDao"></property>
+	</bean>
+	
+	<bean id="trackController" class="com.musicstore.controller.TrackController">
+		<property name="trackDao" ref="trackDao"></property>
+	</bean>
+	
+	<bean id="fileController" class="com.musicstore.controller.FileController">
+		<property name="fileDao" ref="fileDao"></property>
+	</bean>
+	
+	
+	<!-- DAOs -->
+	<bean id="baseDao" class="com.musicstore.dao.BaseDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	  
+	<bean id="commonDao" class="com.musicstore.dao.CommonDao">
+		<constructor-arg ref="baseDao" />
+	</bean>
+
+	<bean id="signUpDao" class="com.musicstore.dao.SignUpDao">
+		<constructor-arg ref="baseDao" />
+	</bean>
+   
+	<bean id="loginLogoutDao" class="com.musicstore.dao.LoginLogoutDao">
+		<constructor-arg ref="baseDao" />
+	</bean>
+	
+	<bean id="profileDao" class="com.musicstore.dao.ProfileDao">
+		<constructor-arg ref="baseDao" />
+	</bean>
+	
+	<bean id="changePasswordDao" class="com.musicstore.dao.ChangePasswordDao">
+		<constructor-arg ref="baseDao" />
+	</bean>
+	
+	<bean id="albumDao" class="com.musicstore.dao.AlbumDao">
+   		<constructor-arg ref="baseDao" />
+   	</bean>
+   	
+   	<bean id="trackDao" class="com.musicstore.dao.TrackDao">
+   		<constructor-arg ref="baseDao" />
+   	</bean>
+   	
+   	<bean id="fileDao" class="com.musicstore.dao.FileDao">
+   		<constructor-arg ref="baseDao" />
+   	</bean>
+   
+</beans>

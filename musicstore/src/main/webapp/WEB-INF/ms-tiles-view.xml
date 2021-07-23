@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	
+	<!-- Home -->
+	<definition name="ms_home" template="/WEB-INF/views/page/ms_home.jsp">
+		<put-attribute name="ms_libs" value="/WEB-INF/views/_includes/ms_libs.jsp" />
+		<put-attribute name="ms_footer" value="/WEB-INF/views/_includes/ms_footer.jsp" />
+	</definition>
+	
+	<!-- Dashboard -->
+	<definition name="ms_dashboard" template="/WEB-INF/views/page/ms_dashboard.jsp">
+		<put-attribute name="ms_libs" value="/WEB-INF/views/_includes/ms_libs.jsp" cascade="true" />
+		<put-attribute name="ms_header" value="/WEB-INF/views/_includes/ms_header.jsp" />
+		<put-attribute name="ms_contents" value="/WEB-INF/views/_includes/ms_contents.jsp" />
+		<put-attribute name="ms_footer" value="/WEB-INF/views/_includes/ms_footer.jsp" />
+	</definition>
+	
+	
+	<!-- Profile -->
+	<definition name="ms_profile" template="/WEB-INF/views/portlet/ms_profile.jsp">
+		<put-attribute name="ms_libs" value="/WEB-INF/views/_includes/ms_libs.jsp" />
+		<put-attribute name="ms_header" value="/WEB-INF/views/_includes/ms_header.jsp" />
+		<put-attribute name="ms_contents" value="/WEB-INF/views/_includes/ms_contents.jsp" />
+		<put-attribute name="ms_footer" value="/WEB-INF/views/_includes/ms_footer.jsp" />
+	</definition>
+	
+	
+	<!-- Change Password -->
+	<definition name="ms_change_pwd" template="/WEB-INF/views/portlet/ms_change_pwd.jsp">
+		<put-attribute name="ms_libs" value="/WEB-INF/views/_includes/ms_libs.jsp" />
+		<put-attribute name="ms_header" value="/WEB-INF/views/_includes/ms_header.jsp" />
+		<put-attribute name="ms_contents" value="/WEB-INF/views/_includes/ms_contents.jsp" />
+		<put-attribute name="ms_footer" value="/WEB-INF/views/_includes/ms_footer.jsp" />
+	</definition>
+	
+	
+	<!-- Album -->
+	<definition name="ms_album" template="/WEB-INF/views/portlet/ms_album.jsp">
+		<put-attribute name="ms_libs" value="/WEB-INF/views/_includes/ms_libs.jsp" />
+		<put-attribute name="ms_header" value="/WEB-INF/views/_includes/ms_header.jsp" />
+		<put-attribute name="ms_contents" value="/WEB-INF/views/_includes/ms_contents.jsp" />
+		<put-attribute name="ms_footer" value="/WEB-INF/views/_includes/ms_footer.jsp" />
+	</definition>
+	
+	
+	<!-- Track -->
+	<definition name="ms_track" template="/WEB-INF/views/portlet/ms_track.jsp">
+		<put-attribute name="ms_libs" value="/WEB-INF/views/_includes/ms_libs.jsp" />
+		<put-attribute name="ms_header" value="/WEB-INF/views/_includes/ms_header.jsp" />
+		<put-attribute name="ms_contents" value="/WEB-INF/views/_includes/ms_contents.jsp" />
+		<put-attribute name="ms_footer" value="/WEB-INF/views/_includes/ms_footer.jsp" />
+	</definition>
+	
+	
+	<!-- Files Upload -->
+	<definition name="ms_file_upload" template="/WEB-INF/views/portlet/ms_file_upload.jsp">
+		<put-attribute name="ms_libs" value="/WEB-INF/views/_includes/ms_libs.jsp" />
+		<put-attribute name="ms_header" value="/WEB-INF/views/_includes/ms_header.jsp" />
+		<put-attribute name="ms_contents" value="/WEB-INF/views/_includes/ms_contents.jsp" />
+		<put-attribute name="ms_footer" value="/WEB-INF/views/_includes/ms_footer.jsp" />
+	</definition>
+	
+	
+	
+	<!-- Error Page -->
+	<definition name="ms_handle_error" template="/WEB-INF/views/portlet/ms_handle_error.jsp">
+		<put-attribute name="ms_libs" value="/WEB-INF/views/_includes/ms_libs.jsp" />
+		<put-attribute name="ms_contents" value="/WEB-INF/views/_includes/ms_contents.jsp" />
+		<put-attribute name="ms_footer" value="/WEB-INF/views/_includes/ms_footer.jsp" />
+	</definition>
+	
+</tiles-definitions>
