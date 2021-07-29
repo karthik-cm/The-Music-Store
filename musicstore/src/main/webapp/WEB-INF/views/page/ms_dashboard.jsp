@@ -43,15 +43,15 @@
 		
 		
 		<!-- Profile Details -->
-		<!-- <div id="profile-details-portlet"></div>
+		<!-- <div id="profile-details-portlet"></div> -->
 		
 		
-		Album
-		<div id="album-portlet"></div>
+		<!-- Album -->
+		<!-- <div id="album-portlet"></div> -->
 		
 		
-		Track
-		<div id="track-portlet"></div> -->
+		<!-- Track -->
+		<!-- <div id="track-portlet"></div> --> 
 		
 		
 		<!-- Image Loader -->
