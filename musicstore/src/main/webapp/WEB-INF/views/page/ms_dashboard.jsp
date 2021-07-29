@@ -56,6 +56,7 @@
 		
 		<!-- Image Loader -->
 		<img class="ms-loader align-center hide" style="padding: 0px 0px 20px 555px; border-radius: 60%;" alt="Loading..." src="ui-resources/gifs/loading.gif">
+		
 	</div>
 
 
